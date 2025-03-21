@@ -1,8 +1,8 @@
-import { Layout } from "@/sections";
+import { Layout, Hero } from "@/sections";
 export default function Home() {
   return (
     <Layout>
-      <div>Landing page</div>
+    <Hero />
     </Layout>
   );
 }

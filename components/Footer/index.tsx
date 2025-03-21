@@ -4,6 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaSkype } from "react-icons/fa";
 import { HiOutlineChevronRight } from "react-icons/hi"; 
 import logo from "@/public/images/logo.png";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
