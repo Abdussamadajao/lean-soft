@@ -66,17 +66,17 @@ const Navbar = () => {
           <div className="container-custom py-3 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
             <div className="flex flex-col sm:flex-row sm:space-x-6 text-gray-700 text-sm">
               <div className="flex items-center space-x-1">
-                <FaPhone size={12} color="#2AB9EB" />
-                <span>+1-CALL-ALVEUM</span>
+                <FaPhone size={12} color="#0766ff" />
+                <span>+1-CALL-NAME</span>
               </div>
               <div className="flex items-center space-x-1">
-                <FaEnvelope size={12} color="#2AB9EB" />
-                <a
-                  href="mailto:contact@alveum.com"
+                <FaEnvelope size={12} color="#0766ff" />
+                <Link
+                  href="mailto:test@test.com"
                   className="hover:text-electblue transition-colors duration-300"
                 >
-                  contact@alveum.com
-                </a>
+                  test@test.com
+                </Link>
               </div>
             </div>
             <div className="flex space-x-3">
@@ -91,7 +91,7 @@ const Navbar = () => {
                   href={link}
                   aria-label={`Social link ${index + 1}`}
                 >
-                  <Icon size={12} color="#2AB9EB" />
+                  <Icon size={12} color="#0766ff" />
                 </a>
               ))}
             </div>
@@ -103,14 +103,7 @@ const Navbar = () => {
       <div className={`bg-white z-40 transition-transform duration-300`}>
         <div className="container-custom py-4 flex justify-between items-center">
           <Link href="/" aria-label="Home">
-            <Image
-              src={logo}
-              alt="Alveum Logo"
-              width={272}
-              height={38}
-              className="cursor-pointer"
-              priority
-            />
+            <h1 className="text-4xl font-extrabold">LOGO</h1>
           </Link>
 
           {/* Mobile Menu Toggle */}
