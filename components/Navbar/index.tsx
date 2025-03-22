@@ -53,7 +53,7 @@ const Navbar = () => {
             <FaSearch size={20} className="text-electblue cursor-pointer" />
           </div>
 
-          <nav className="hidden lg:flex space-x-6 text-gray-700 text-sm">
+          <nav className="hidden lg:flex space-x-6 text-black font-semibold text-[1rem]">
             {['Home', 'About', 'Service', 'Projects', 'News', 'Team', 'Careers', 'Contact'].map((item) => {
               const href = `/${item.toLowerCase()}`;
               return (
@@ -73,7 +73,7 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="lg:hidden bg-white shadow-md p-4 absolute w-full z-50">
-          <nav className="flex flex-col space-y-4 text-gray-700 text-sm">
+          <nav className="flex flex-col space-y-4 text-black font-semibold text-[1rem]">
             {['Home', 'About', 'Service', 'Projects', 'News', 'Team', 'Careers', 'Contact'].map((item) => {
               const href = `/${item.toLowerCase()}`;
               return (

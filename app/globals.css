@@ -6,6 +6,7 @@
 @theme {
   
   --color-electblue: #2ab9eb;
+  --color-textcolor: #727B9A;
 }
 
 @theme inline {
@@ -119,11 +120,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-.embla__container {
-  display: flex;
-  flex-direction: column;
-  transform: translateY(0); /* Ensure slides move from top to bottom */
-}
 
 @layer base {
   * {

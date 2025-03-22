@@ -26,11 +26,11 @@ const slideTexts = [
 ];
 
 const Hero: React.FC = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: "y" }, [Autoplay({ delay: 5000 })]); // Set axis to "y" for vertical scrolling
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: "y" }, [Autoplay({ delay: 5000 })]); 
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0); // Track active slide index
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const updateButtons = useCallback(() => {
     if (!emblaApi) return;
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap()); // Update active slide index
+    setSelectedIndex(emblaApi.selectedScrollSnap()); 
     updateButtons();
   }, [emblaApi, updateButtons]);
 
@@ -60,16 +60,14 @@ const Hero: React.FC = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="overflow-hidden h-full" ref={emblaRef}>
-        <div className="flex flex-col h-full transform translate-y-0"> {/* Ensure slides stack vertically */}
+        <div className="flex flex-col h-full transform translate-y-0"> 
           {slides.map((slide, index) => (
             <div className="flex-[0_0_100%] relative h-full" key={index}>
               <Image src={slide} alt={`Slide ${index + 1}`} fill className="object-cover" />
               
-              {/* Background overlay */}
               <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
               
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
-                {/* h2 - Slides in from the top */}
                 <motion.h2
                   initial={{ y: -50, opacity: 0 }}
                   animate={selectedIndex === index ? { y: 0, opacity: 1 } : {}}
@@ -79,7 +77,6 @@ const Hero: React.FC = () => {
                   {slideTexts[index]?.title}
                 </motion.h2>
 
-                {/* h1 - Slides in from the top */}
                 <motion.h1
                   initial={{ y: -50, opacity: 0 }}
                   animate={selectedIndex === index ? { y: 0, opacity: 1 } : {}}
@@ -89,7 +86,6 @@ const Hero: React.FC = () => {
                   {slideTexts[index]?.subtitle}
                 </motion.h1>
 
-                {/* Description - Fades in */}
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={selectedIndex === index ? { opacity: 1 } : {}}
@@ -99,7 +95,6 @@ const Hero: React.FC = () => {
                   {slideTexts[index]?.desc}
                 </motion.p>
 
-                {/* Buttons - Slide in from the bottom */}
                 <motion.div
                   initial={{ y: 50, opacity: 0 }}
                   animate={selectedIndex === index ? { y: 0, opacity: 1 } : {}}
@@ -119,7 +114,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Navigation arrows with fade-in animation */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
