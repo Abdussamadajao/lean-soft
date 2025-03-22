@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --elect-blue: #2ab9eb;
+  --elect-blue: oklch(57.61% 0.233 258.59);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -74,7 +74,7 @@
 }
 
 @theme {
-  --color-electblue: #2ab9eb;
+  --color-electblue: oklch(57.61% 0.233 258.59);
 }
 
 @theme inline {
