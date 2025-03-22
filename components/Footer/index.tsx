@@ -149,7 +149,7 @@ const Footer = () => {
         <span className=" text-[14px]">
           © 2024{" "}
           <a href="#" className="text-electblue">
-            Alveum, Inc.
+            Name Inc.
           </a>{" "}
           All Rights Reserved.
         </span>
