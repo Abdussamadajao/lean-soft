@@ -37,7 +37,7 @@ const newsData = [
 
 const News = () => {
   return (
-    <section className="py-12 bg-white">
+    <section className=" bg-white">
       <div className="container-custom mx-auto">
         <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
           <h2 className="text-[2rem] font-bold mb-4 text-black">
@@ -48,7 +48,7 @@ const News = () => {
           </h5>
         </div>
 
-        <div className="grid gap-8 mt-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 my-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {newsData.map((news) => (
             <div
               key={news.id}
