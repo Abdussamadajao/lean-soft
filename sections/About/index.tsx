@@ -6,7 +6,7 @@ import Image from "next/image";
 const About: React.FC = () => {
   return (
     <section className="py-12 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container-custom mx-auto">
         <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
           <h2 className="text-[2rem] font-bold mb-4 text-black">
             About <span className="text-electblue">Alveum</span>
