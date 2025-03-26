@@ -1,8 +1,8 @@
-"use client"; // Enable client-side interactivity
+"use client"; 
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
+import { motion, AnimatePresence } from "framer-motion"; 
 import pr1 from "@/public/images/pr1.jpg";
 import pr2 from "@/public/images/pr2.jpg";
 import pr3 from "@/public/images/pr3.jpg";
@@ -13,7 +13,6 @@ import pr7 from "@/public/images/pr7.jpg";
 import pr8 from "@/public/images/pr8.jpg";
 
 const Projects = () => {
-  // Array of portfolio items
   const portfolioItems = [
     { id: 1, image: pr1, category: "Tailored AI Systems", title: "AI-Powered Healthcare", description: "Revolutionizing healthcare diagnostics with AI.", link: "#" },
     { id: 2, image: pr2, category: "Predictive Modeling", title: "Financial Forecasting", description: "Optimizing financial predictions with advanced models.", link: "#" },
@@ -25,23 +24,20 @@ const Projects = () => {
     { id: 8, image: pr8, category: "Process Automation", title: "HR Process Automation", description: "Automating HR workflows for efficiency.", link: "#" },
   ];
 
-  // State to track hovered item
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
-  // State to track active category (default is "View All")
   const [activeCategory, setActiveCategory] = useState<string>("View All");
 
-  // Unique categories
   const categories = ["View All", ...new Set(portfolioItems.map((item) => item.category))];
 
-  // Filtered portfolio items based on active category
-  const filteredItems = activeCategory === "View All"
-    ? portfolioItems // Show all items if "View All" is selected
-    : portfolioItems.filter((item) => item.category === activeCategory);
+  const filteredItems =
+    activeCategory === "View All"
+      ? portfolioItems 
+      : portfolioItems.filter((item) => item.category === activeCategory);
 
   return (
     <section className="py-12 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container-custom mx-auto">
         <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
           <h2 className="text-[2rem] font-bold mb-4 text-black">
             Recent <span className="text-electblue">Projects</span>
@@ -51,7 +47,6 @@ const Projects = () => {
           </h5>
         </div>
 
-        {/* Category Filter Navbar */}
         <div className="flex justify-center gap-4 mt-8 flex-wrap">
           {categories.map((category) => (
             <button
@@ -59,8 +54,8 @@ const Projects = () => {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-2 rounded-full shadow-md text-base font-semibold transition-all duration-300 ease-in-out cursor-pointer ${
                 activeCategory === category
-                  ? "bg-electblue text-white" // Active category style
-                  : "bg-[#DADADA] text-black hover:text-electblue" // Default and hover style
+                  ? "bg-electblue text-white" 
+                  : "bg-[#DADADA] text-black hover:text-electblue" 
               }`}
             >
               {category}
@@ -68,43 +63,48 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Projects Portfolio Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 justify-center">
           <AnimatePresence>
             {filteredItems.map((item) => (
               <motion.div
                 key={item.id}
-                className="relative overflow-hidden group h-fit" // Ensure height matches image height
+                className="relative overflow-hidden group flex justify-center items-center"
                 onMouseEnter={() => setHoveredItem(item.id)}
                 onMouseLeave={() => setHoveredItem(null)}
-                initial={{ opacity: 0, scale: 0.9 }} // Initial animation state
-                animate={{ opacity: 1, scale: 1 }} // Animate to this state
-                exit={{ opacity: 0, scale: 0.9 }} // Exit animation state
-                transition={{ type: "tween", duration: 0.3, ease: "easeOut" }} // Fast-slowing transition
-                whileHover={{ scale: 1.05 }} // Zoom in effect on hover
+                initial={{ opacity: 0, scale: 0.9 }} 
+                animate={{ opacity: 1, scale: 1 }} 
+                exit={{ opacity: 0, scale: 0.9 }} 
+                transition={{ type: "tween", duration: 0.3, ease: "easeOut" }} 
+                whileHover={{ scale: 1.05 }} 
               >
-                {/* Portfolio Image */}
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
-
-                {/* Sliding Div */}
-                <div
-                  className={`absolute top-4 left-4 right-4 bottom-4 bg-electblue/90 text-white p-6 transform transition-transform duration-500 ${
-                    hoveredItem === item.id ? "translate-x-0" : "-translate-x-full"
-                  }`}
-                >
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm mb-4">{item.description}</p>
-                  <a
-                    href={item.link}
-                    className="text-sm font-semibold underline hover:text-black transition-colors"
-                  >
-                    Learn More
-                  </a>
+                <div className="w-full h-full flex justify-center">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    className="object-cover rounded-lg"
+                    width={350}
+                    height={300}
+                    style={{ maxWidth: "350px", maxHeight: "300px" }}
+                  />
                 </div>
+
+                <motion.div
+                    className="absolute top-4 left-10 right-10 bottom-4 bg-electblue/90 text-white p-6 rounded-lg shadow-lg"
+                    initial={{ x: "-100%", opacity: 0 }}
+                    animate={hoveredItem === item.id ? { x: 0, opacity: 1 } : { x: "-100%", opacity: 0 }}
+                    transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
+                    style={{ visibility: hoveredItem === item.id ? "visible" : "hidden" }} 
+                    >
+                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-sm mb-4">{item.description}</p>
+                    <a
+                        href={item.link}
+                        className="text-sm font-semibold underline hover:text-black transition-colors"
+                    >
+                        Learn More
+                    </a>
+                </motion.div>
+
               </motion.div>
             ))}
           </AnimatePresence>
