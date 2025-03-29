@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ta from "@/public/images/Tai.png";
 import daniel from "@/public/images/Daniel.png";
+import { Element } from "react-scroll";
 
 const Team = () => {
   const teamMembers = [
@@ -44,62 +45,69 @@ const Team = () => {
   }, [emblaApi, updateScrollState]);
 
   return (
-    <section className="py-12 bg-white">
-      <div className="container-custom mx-auto">
-        <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
-          <h2 className="text-[2rem] font-bold mb-4 text-black">
-            Our <span className="text-electblue">Team</span>
-          </h2>
-          <h5 className="text-lg text-textcolor">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </h5>
-        </div>
+    <Element name="team">
+      <section className="py-12 bg-white">
+        <div className="container-custom mx-auto">
+          <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
+            <h2 className="text-[2rem] font-bold mb-4 text-black">
+              Our <span className="text-electblue">Team</span>
+            </h2>
+            <h5 className="text-lg text-textcolor">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </h5>
+          </div>
 
-        <div className="relative mt-8">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-4">
-              {teamMembers.map((member) => (
-                <div
-                  key={member.id}
-                  className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%] px-3"
-                >
-                  <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-[280px] object-cover object-top"
-                    />
-                    <div className="absolute bottom-0 w-full bg-electblue text-white p-3 bg-opacity-90 text-center">
-                      <h3 className="text-lg font-semibold">{member.name}</h3>
-                      <p className="text-sm">{member.title}</p>
+          <div className="relative mt-8">
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex gap-4">
+                {teamMembers.map((member) => (
+                  <div
+                    key={member.id}
+                    className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%] px-3"
+                  >
+                    <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={300}
+                        height={300}
+                        className="w-full h-[280px] object-cover object-top"
+                      />
+                      <div className="absolute bottom-0 w-full bg-electblue text-white p-3 bg-opacity-90 text-center">
+                        <h3 className="text-lg font-semibold">{member.name}</h3>
+                        <p className="text-sm">{member.title}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            <div className="flex justify-center gap-4 mt-6">
+              <button
+                className={`p-2 rounded-full bg-gray-300 ${
+                  !canScrollPrev ? "opacity-50" : ""
+                }`}
+                onClick={() => emblaApi && emblaApi.scrollPrev()}
+                disabled={!canScrollPrev}
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                className={`p-2 rounded-full bg-gray-300 ${
+                  !canScrollNext ? "opacity-50" : ""
+                }`}
+                onClick={() => emblaApi && emblaApi.scrollNext()}
+                disabled={!canScrollNext}
+              >
+                <ChevronRight size={24} />
+              </button>
             </div>
           </div>
-
-          <div className="flex justify-center gap-4 mt-6">
-            <button
-              className={`p-2 rounded-full bg-gray-300 ${!canScrollPrev ? "opacity-50" : ""}`}
-              onClick={() => emblaApi && emblaApi.scrollPrev()}
-              disabled={!canScrollPrev}
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button
-              className={`p-2 rounded-full bg-gray-300 ${!canScrollNext ? "opacity-50" : ""}`}
-              onClick={() => emblaApi && emblaApi.scrollNext()}
-              disabled={!canScrollNext}
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Element>
   );
 };
 
