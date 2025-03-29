@@ -6,6 +6,7 @@
 @theme {
   --color-electblue: #2ab9eb;
   --color-textcolor: #727b9a;
+  --color-headingcolor: #333333;
 }
 
 @theme inline {

@@ -11,3 +11,4 @@ export { default as Testimonials } from "./Testimonials";
 export { default as News } from "./News";
 export { default as Clients } from "./Clients";
 export * from "./contact";
+export * from "./career";
