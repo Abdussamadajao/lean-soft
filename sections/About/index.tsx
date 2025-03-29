@@ -2,12 +2,12 @@
 
 import aboutImg from "@/public/images/about.jpg";
 import Image from "next/image";
-import { Element } from "react-scroll";
+
 
 const About: React.FC = () => {
   return (
-    <Element name="about">
-      <section className="py-12 bg-white">
+
+      <section  className="py-12 bg-white" id="about"> 
         <div className="container-custom mx-auto">
           <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
             <h2 className="text-[2rem] font-bold mb-4 text-black">
@@ -47,7 +47,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-    </Element>
+
   );
 };
 

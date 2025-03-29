@@ -5,7 +5,7 @@ import { FaPen, FaCalendarAlt, FaHeart } from "react-icons/fa";
 import n1 from "@/public/images/n1.jpg";
 import n2 from "@/public/images/n2.jpg";
 import n3 from "@/public/images/n3.jpg";
-import { Element } from "react-scroll";
+
 
 const newsData = [
   {
@@ -39,8 +39,8 @@ const newsData = [
 
 const News = () => {
   return (
-    <Element name="news">
-      <section className=" bg-white">
+   
+      <section id='news' className=" bg-white">
         <div className="container-custom mx-auto">
           <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
             <h2 className="text-[2rem] font-bold mb-4 text-black">
@@ -100,7 +100,7 @@ const News = () => {
           </div>
         </div>
       </section>
-    </Element>
+
   );
 };
 

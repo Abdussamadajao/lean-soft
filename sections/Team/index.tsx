@@ -1,25 +1,23 @@
 "use client";
-
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import ta from "@/public/images/Tai.png";
-import daniel from "@/public/images/Daniel.png";
-import { Element } from "react-scroll";
+
+
 
 const Team = () => {
   const teamMembers = [
-    { id: 1, name: "Tai", title: "AI Visionary", image: ta },
-    { id: 2, name: "Daniel", title: "Software Engineer", image: daniel },
-    { id: 3, name: "Alice", title: "Domain Expert", image: ta },
-    { id: 4, name: "Bob", title: "AI Researcher", image: daniel },
-    { id: 5, name: "Charlie", title: "Data Scientist", image: ta },
-    { id: 6, name: "Diana", title: "Product Manager", image: daniel },
-    { id: 7, name: "Eve", title: "UX Designer", image: ta },
-    { id: 8, name: "Frank", title: "DevOps Engineer", image: daniel },
-    { id: 9, name: "Grace", title: "Frontend Developer", image: ta },
-    { id: 10, name: "Hank", title: "Backend Developer", image: daniel },
+    { id: 1, name: "Tai", title: "AI Visionary", image: '/images/dummy.jpg' },
+    { id: 2, name: "Daniel", title: "Software Engineer", image: '/images/dummy.jpg' },
+    { id: 3, name: "Alice", title: "Domain Expert", image: '/images/dummy.jpg' },
+    { id: 4, name: "Bob", title: "AI Researcher", image: '/images/dummy.jpg' },
+    { id: 5, name: "Charlie", title: "Data Scientist", image: '/images/dummy.jpg' },
+    { id: 6, name: "Diana", title: "Product Manager", image: '/images/dummy.jpg' },
+    { id: 7, name: "Eve", title: "UX Designer", image: '/images/dummy.jpg' },
+    { id: 8, name: "Frank", title: "DevOps Engineer", image: '/images/dummy.jpg' },
+    { id: 9, name: "Grace", title: "Frontend Developer", image: '/images/dummy.jpg' },
+    { id: 10, name: "Hank", title: "Backend Developer", image: '/images/dummy.jpg' },
   ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
@@ -45,8 +43,8 @@ const Team = () => {
   }, [emblaApi, updateScrollState]);
 
   return (
-    <Element name="team">
-      <section className="py-12 bg-white">
+ 
+      <section id='team' className="py-12 bg-white">
         <div className="container-custom mx-auto">
           <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
             <h2 className="text-[2rem] font-bold mb-4 text-black">
@@ -107,7 +105,7 @@ const Team = () => {
           </div>
         </div>
       </section>
-    </Element>
+
   );
 };
 

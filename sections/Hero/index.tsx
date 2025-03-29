@@ -11,7 +11,7 @@ import hero1 from "@/public/images/hero1.jpg";
 import hero2 from "@/public/images/hero2.jpg";
 import hero3 from "@/public/images/hero3.jpg";
 import hero4 from "@/public/images/hero4.jpg";
-import { Element } from "react-scroll";
+
 
 const slides = [hero1, hero2, hero3, hero4, hero1, hero2, hero3, hero4];
 
@@ -89,8 +89,9 @@ const Hero: React.FC = () => {
   const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
   return (
-    <Element name="hero">
+ 
       <section
+        id="hero"
         className="relative w-full h-[calc(100vh-80px)]"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -193,7 +194,7 @@ const Hero: React.FC = () => {
           </button>
         </motion.div>
       </section>
-    </Element>
+   
   );
 };
 

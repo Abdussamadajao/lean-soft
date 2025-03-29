@@ -11,7 +11,7 @@ import pr5 from "@/public/images/pr5.jpg";
 import pr6 from "@/public/images/pr6.jpg";
 import pr7 from "@/public/images/pr7.jpg";
 import pr8 from "@/public/images/pr8.jpg";
-import { Element } from "react-scroll";
+
 
 const Projects = () => {
   const portfolioItems = [
@@ -96,8 +96,8 @@ const Projects = () => {
       : portfolioItems.filter((item) => item.category === activeCategory);
 
   return (
-    <Element name="projects">
-      <section className="py-12 bg-white">
+  
+      <section id="projects" className="py-12 bg-white">
         <div className="container-custom mx-auto">
           <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
             <h2 className="text-[2rem] font-bold mb-4 text-black">
@@ -186,7 +186,7 @@ const Projects = () => {
           </div>
         </div>
       </section>
-    </Element>
+    
   );
 };
 

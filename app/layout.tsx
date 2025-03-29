@@ -5,6 +5,8 @@ import { Layout } from "@/sections";
 
 const poppins = Poppins({
   variable: "--font-poppins",
+  subsets: ["latin"],
+  display: "swap",
   weight: ["400", "500", "700"],
 });
 

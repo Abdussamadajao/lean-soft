@@ -8,7 +8,7 @@ import {
   FaMobileAlt,
   FaDatabase,
 } from "react-icons/fa";
-import { Element } from "react-scroll";
+
 
 const Services: React.FC = () => {
   const services = [
@@ -51,8 +51,8 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <Element name="services">
-      <section className="bg-[#F9F9FF] py-12">
+
+      <section id="services" className="bg-[#F9F9FF] py-12">
         <div className="container-custom mx-auto">
           <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
             <h2 className="text-[2rem] font-bold mb-4 text-black">
@@ -87,7 +87,7 @@ const Services: React.FC = () => {
           </div>
         </div>
       </section>
-    </Element>
+  
   );
 };
 
