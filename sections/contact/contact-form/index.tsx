@@ -49,14 +49,11 @@ const ContactForm = () => {
   const onSubmit = async (data: FormData) => {
     try {
       setIsSubmitting(true);
-      // Simulated API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
       console.log("Form submitted:", data);
       form.reset();
-      // Add toast or success message here
     } catch (error) {
       console.error("Submission error:", error);
-      // Add error handling here
     } finally {
       setIsSubmitting(false);
     }
