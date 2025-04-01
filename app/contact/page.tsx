@@ -1,4 +1,4 @@
-import { ContactHero, Contacts } from "@/sections";
+import { ContactForm, ContactHero, Contacts } from "@/sections";
 import React from "react";
 
 const Contact = () => {
@@ -6,6 +6,7 @@ const Contact = () => {
     <>
       <ContactHero />
       <Contacts />
+      <ContactForm />
     </>
   );
 };
