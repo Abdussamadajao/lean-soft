@@ -7,55 +7,67 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import hero1 from "@/public/images/hero1.jpg";
-import hero2 from "@/public/images/hero2.jpg";
-import hero3 from "@/public/images/hero3.jpg";
-import hero4 from "@/public/images/hero4.jpg";
+import hero1 from "@/public/hero/hr1.png";
+import hero2 from "@/public/hero/hr2.png";
+import hero3 from "@/public/hero/hr3.png";
+import hero4 from "@/public/hero/hr4.png";
+import hero5 from "@/public/hero/hr5.png";
+import hero6 from "@/public/hero/hr6.png";
 
 
-const slides = [hero1, hero2, hero3, hero4, hero1, hero2, hero3, hero4];
+const slides = [hero1, hero2, hero3, hero4, hero5, hero6 ];
 
 const slideTexts = [
   {
-    title: "Slide One Title",
-    subtitle: "Subtitle for Slide One",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "LeanSoftWorks",
+    subtitle: "Smart Software. Real Impact",
+    desc: "LeanSoftWorks specializes in Mobile App Development, Custom Software, and AI/ML solutions to help businesses grow smarter.",
   },
   {
-    title: "Slide Two Title",
-    subtitle: "Subtitle for Slide Two",
-    desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "LeanSoftWorks",
+    subtitle: "Smart Software. Real Impact",
+    desc: "LeanSoftWorks specializes in Mobile App Development, Custom Software, and AI/ML solutions to help businesses grow smarter.",
   },
   {
-    title: "Slide Three Title",
-    subtitle: "Subtitle for Slide Three",
-    desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    title: "LeanSoftWorks",
+    subtitle: "Smart Software. Real Impact",
+    desc: "LeanSoftWorks specializes in Mobile App Development, Custom Software, and AI/ML solutions to help businesses grow smarter.",
   },
   {
-    title: "Slide Four Title",
-    subtitle: "Subtitle for Slide Four",
-    desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+    title: "LeanSoftWorks",
+    subtitle: "Smart Software. Real Impact",
+    desc: "LeanSoftWorks specializes in Mobile App Development, Custom Software, and AI/ML solutions to help businesses grow smarter.",
   },
   {
-    title: "Slide Five Title",
-    subtitle: "Subtitle for Slide Five",
-    desc: "Excepteur sint occaecat cupidatat non proident, sunt in culpa.",
+    title: "LeanSoftWorks",
+    subtitle: "Smart Software. Real Impact",
+    desc: "LeanSoftWorks specializes in Mobile App Development, Custom Software, and AI/ML solutions to help businesses grow smarter.",
   },
   {
-    title: "Slide Six Title",
-    subtitle: "Subtitle for Slide Six",
-    desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.",
+    title: "LeanSoftWorks",
+    subtitle: "Smart Software. Real Impact",
+    desc: "LeanSoftWorks specializes in Mobile App Development, Custom Software, and AI/ML solutions to help businesses grow smarter.",
   },
-  {
-    title: "Slide Seven Title",
-    subtitle: "Subtitle for Slide Seven",
-    desc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
-  },
-  {
-    title: "Slide Eight Title",
-    subtitle: "Subtitle for Slide Eight",
-    desc: "Consectetur, adipisci velit, sed quia non numquam eius modi tempora.",
-  },
+  // {
+  //   title: "Slide Five Title",
+  //   subtitle: "Smart Software. Real Impact",
+  //   desc: "Excepteur sint occaecat cupidatat non proident, sunt in culpa.",
+  // },
+  // {
+  //   title: "Slide Six Title",
+  //   subtitle: "Smart Software. Real Impact",
+  //   desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.",
+  // },
+  // {
+  //   title: "Slide Seven Title",
+  //   subtitle: "Subtitle for Slide Seven",
+  //   desc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
+  // },
+  // {
+  //   title: "Slide Eight Title",
+  //   subtitle: "Subtitle for Slide Eight",
+  //   desc: "Consectetur, adipisci velit, sed quia non numquam eius modi tempora.",
+  // },
 ];
 
 const Hero: React.FC = () => {
@@ -107,7 +119,7 @@ const Hero: React.FC = () => {
                   className="object-cover"
                 />
 
-                <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-black/60 mix-blend-multiply"></div>
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6">
                   <motion.h2
@@ -162,10 +174,10 @@ const Hero: React.FC = () => {
                     className="mt-6 flex gap-6"
                   >
                     <button className="bg-electblue hover:bg-blue-700 transition-all duration-300 px-6 py-2 rounded-sm text-white font-semibold shadow-lg">
-                      OUR SERVICES
+                      EXPLORE OUR SERVICES
                     </button>
                     <button className="bg-electblue hover:bg-gray-800 transition-all duration-300 px-6 py-2 rounded-sm text-white font-semibold shadow-lg">
-                      ABOUT US
+                      LET'S TALK
                     </button>
                   </motion.div>
                 </div>

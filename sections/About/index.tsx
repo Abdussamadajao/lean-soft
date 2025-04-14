@@ -11,13 +11,10 @@ const About: React.FC = () => {
         <div className="container-custom mx-auto">
           <div className="flex flex-col items-center text-center mx-auto max-w-3xl">
             <h2 className="text-[2rem] font-bold mb-4 text-black">
-              About <span className="text-electblue">Alveum</span>
+              About <span className="text-electblue">LeanSoftWorks</span>
             </h2>
             <h5 className="text-lg text-center text-textcolor">
-              Alveum praebet Classis Mundi Artificialis Intelligentia (AI),
-              Machina Discentis (ML) Software Development officia ex nostro
-              Nearshore Centro in Etobicoke, Ontario, Canada et nostro Offshore
-              centro apud Ilorin, Kwara Status, Nigeria.
+              At LeanSoftWorks, we build impactful digital solutions with precision and passion. With teams in UK and Nigeria, we combine global experience with local insights to deliver meaningful software experiences in mobile, cloud, and intelligent systems.
             </h5>
           </div>
 

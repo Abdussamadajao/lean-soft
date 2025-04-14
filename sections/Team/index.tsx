@@ -8,16 +8,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Team = () => {
   const teamMembers = [
-    { id: 1, name: "Tai", title: "AI Visionary", image: '/images/dummy.jpg' },
-    { id: 2, name: "Daniel", title: "Software Engineer", image: '/images/dummy.jpg' },
-    { id: 3, name: "Alice", title: "Domain Expert", image: '/images/dummy.jpg' },
+    { id: 1, name: "Tajudeen Nurudeen", title: "CEO", image: '/images/dummy.jpg' },
+    { id: 2, name: "Ajao AttaulMujeeb", title: "CTO", image: '/images/dummy.jpg' },
+    { id: 3, name: "Abdul Rahman Kole-Ibrahim", title: "Technical Team Lead", image: '/images/dummy.jpg' },
     { id: 4, name: "Bob", title: "AI Researcher", image: '/images/dummy.jpg' },
     { id: 5, name: "Charlie", title: "Data Scientist", image: '/images/dummy.jpg' },
     { id: 6, name: "Diana", title: "Product Manager", image: '/images/dummy.jpg' },
-    { id: 7, name: "Eve", title: "UX Designer", image: '/images/dummy.jpg' },
-    { id: 8, name: "Frank", title: "DevOps Engineer", image: '/images/dummy.jpg' },
-    { id: 9, name: "Grace", title: "Frontend Developer", image: '/images/dummy.jpg' },
-    { id: 10, name: "Hank", title: "Backend Developer", image: '/images/dummy.jpg' },
+    // { id: 7, name: "Eve", title: "UX Designer", image: '/images/dummy.jpg' },
+    // { id: 8, name: "Frank", title: "DevOps Engineer", image: '/images/dummy.jpg' },
+    // { id: 9, name: "Grace", title: "Frontend Developer", image: '/images/dummy.jpg' },
+    // { id: 10, name: "Hank", title: "Backend Developer", image: '/images/dummy.jpg' },
   ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
@@ -51,8 +51,7 @@ const Team = () => {
               Our <span className="text-electblue">Team</span>
             </h2>
             <h5 className="text-lg text-textcolor">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Our multidisciplinary team of engineers, designers, and data scientists are passionate about solving hard problems and shipping great software.
             </h5>
           </div>
 

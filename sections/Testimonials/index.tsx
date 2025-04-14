@@ -8,13 +8,13 @@ import { FaQuoteLeft, FaPen } from "react-icons/fa";
 const testimonials = [
   {
     id: 1,
-    text: "When it comes to big data analytics and AI-powered forecasting, Alveum is unparalleled. They helped us develop a predictive modeling system that has dramatically improved our risk assessment accuracy.",
+    text: "Working with LeanSoftWorks was a game-changer. They didn’t just build our mobile app — they helped us rethink the user experience from the ground up. The result? A 40% increase in user engagement within 2 months.",
     name: "John Doe",
     title: "CEO, Tech Innovations",
   },
   {
     id: 2,
-    text: "When it comes to big data analytics and AI-powered forecasting, Alveum is unparalleled. They helped us develop a predictive modeling system that has dramatically improved our risk assessment accuracy.",
+    text: "As a startup, we needed a tech partner, not just coders. LeanSoftWorks guided us through architecture, MVP development, and launch — all within budget. They’re the reason we hit product-market fit in record time.",
     name: "Jane Smith",
     title: "COO, Green Future",
   },
