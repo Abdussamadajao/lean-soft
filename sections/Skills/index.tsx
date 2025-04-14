@@ -5,28 +5,28 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 
 const Skills = () => {
   const skills = [
-    { title: "AI & Machine Learning", percentage: 90 },
-    { title: "Data Analytics", percentage: 85 },
-    { title: "Cloud Solutions", percentage: 80 },
-    { title: "Software Development", percentage: 95 },
-    { title: "Automation", percentage: 75 },
+    { title: "Mobile & Web Development", percentage: 90 },
+    { title: "AI & Machine Learning", percentage: 85 },
+    { title: "Data Engineering", percentage: 80 },
+    { title: "Cloud Infrastructure", percentage: 95 },
+    { title: "Automation & DevOps", percentage: 75 },
   ];
 
   const faqs = [
     {
-      question: "What services does Alveum provide?",
+      question: "What types of software do you build?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "From simple mobile apps to enterprise AI platforms, we craft tailored solutions to fit your goals.",
     },
     {
-      question: "How does Alveum ensure quality?",
+      question: "Can you handle end-to-end development?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Absolutely — from idea to deployment, our team manages the full software lifecycle.",
     },
     {
-      question: "What industries does Alveum serve?",
+      question: "Do you work with startups or large enterprises?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Both! We scale solutions to match your business size and needs.",
     },
   ];
 

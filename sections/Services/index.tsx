@@ -13,41 +13,41 @@ import {
 const Services: React.FC = () => {
   const services = [
     {
-      icon: <FaCode className="w-12 h-12 text-electblue" />,
-      title: "Custom Software Development",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      icon: <FaRobot className="w-12 h-12 text-electblue" />,
-      title: "AI & Machine Learning",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      icon: <FaCloud className="w-12 h-12 text-electblue" />,
-      title: "Cloud Solutions",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      icon: <FaChartLine className="w-12 h-12 text-electblue" />,
-      title: "Data Analytics",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
       icon: <FaMobileAlt className="w-12 h-12 text-electblue" />,
       title: "Mobile App Development",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Sleek, scalable apps for Android and iOS users everywhere.",
+    },
+    {
+      icon: <FaRobot className="w-12 h-12 text-electblue" />,
+      title: "Custom Software Development",
+      description:
+        "Bespoke software crafted around your business.",
+    },
+    {
+      icon: <FaCode className="w-12 h-12 text-electblue" />,
+      title: "AI & ML Solutions",
+      description:
+        "Intelligent automation that learns, predicts, and adapts.",
+    },
+    {
+      icon: <FaCloud className="w-12 h-12 text-electblue" />,
+      title: "Cloud Engineering",
+      description:
+        "Robust and secure systems built on modern cloud infrastructure.",
     },
     {
       icon: <FaDatabase className="w-12 h-12 text-electblue" />,
-      title: "Database Management",
+      title: "Database Architecture",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Reliable storage, structured for performance and security.",
     },
+    // {
+    //   icon: <FaDatabase className="w-12 h-12 text-electblue" />,
+    //   title: "Database Management",
+    //   description:
+    //     "",
+    // },
   ];
 
   return (
@@ -59,13 +59,7 @@ const Services: React.FC = () => {
               Our <span className="text-electblue">Services</span>
             </h2>
             <h5 className="text-lg text-center text-textcolor">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              We offer future-ready solutions to transform the way you work:
             </h5>
           </div>
 

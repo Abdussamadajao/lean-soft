@@ -18,7 +18,7 @@ const Projects = () => {
     {
       id: 1,
       image: pr1,
-      category: "Tailored AI Systems",
+      category: "FinTech",
       title: "AI-Powered Healthcare",
       description: "Revolutionizing healthcare diagnostics with AI.",
       link: "#",
@@ -26,7 +26,7 @@ const Projects = () => {
     {
       id: 2,
       image: pr2,
-      category: "Predictive Modeling",
+      category: "eCommerce",
       title: "Financial Forecasting",
       description: "Optimizing financial predictions with advanced models.",
       link: "#",
@@ -34,7 +34,7 @@ const Projects = () => {
     {
       id: 3,
       image: pr3,
-      category: "NLP Solutions",
+      category: "Journal Management website",
       title: "Chatbot Development",
       description: "Building intelligent chatbots for customer support.",
       link: "#",
@@ -42,7 +42,7 @@ const Projects = () => {
     {
       id: 4,
       image: pr4,
-      category: "Process Automation",
+      category: "Event management applications",
       title: "Supply Chain Automation",
       description: "Streamlining supply chain processes with automation.",
       link: "#",
@@ -50,7 +50,7 @@ const Projects = () => {
     {
       id: 5,
       image: pr5,
-      category: "Tailored AI Systems",
+      category: "FinTech",
       title: "AI for Retail",
       description: "Enhancing retail experiences with AI solutions.",
       link: "#",
@@ -58,7 +58,7 @@ const Projects = () => {
     {
       id: 6,
       image: pr6,
-      category: "Predictive Modeling",
+      category: "eCommerce",
       title: "Weather Prediction",
       description: "Accurate weather forecasting using predictive models.",
       link: "#",
@@ -66,7 +66,7 @@ const Projects = () => {
     {
       id: 7,
       image: pr7,
-      category: "NLP Solutions",
+      category: "Journal Management website",
       title: "Sentiment Analysis",
       description: "Analyzing customer sentiment with NLP.",
       link: "#",
@@ -74,7 +74,7 @@ const Projects = () => {
     {
       id: 8,
       image: pr8,
-      category: "Process Automation",
+      category: "Event management applications",
       title: "HR Process Automation",
       description: "Automating HR workflows for efficiency.",
       link: "#",
