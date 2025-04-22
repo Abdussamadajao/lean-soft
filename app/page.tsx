@@ -24,7 +24,7 @@ export default function Home() {
       <Achieves />
       <Team />
       <Testimonials />
-      <News />
+      {/* <News /> */}
       <Clients />
     </>
   );
