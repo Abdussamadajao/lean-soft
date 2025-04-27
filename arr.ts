@@ -1,20 +1,20 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export const contactCards = [
-  {
-    Icon: FaMapMarkerAlt,
-    title: "North America",
-    locations: [
-      {
-        country: "Canada",
-        address: "Unit 700 - 333 Bering Avenue, Etobicoke, ON, Canada M8Z 3A8",
-      },
-      {
-        country: "United States",
-        address: "1901 1st Avenue STE 207, San Diego CA, USA 92101",
-      },
-    ],
-  },
+  // {
+  //   Icon: FaMapMarkerAlt,
+  //   title: "North America",
+  //   locations: [
+  //     {
+  //       country: "Canada",
+  //       address: "Unit 700 - 333 Bering Avenue, Etobicoke, ON, Canada M8Z 3A8",
+  //     },
+  //     {
+  //       country: "United States",
+  //       address: "1901 1st Avenue STE 207, San Diego CA, USA 92101",
+  //     },
+  //   ],
+  // },
   {
     Icon: FaMapMarkerAlt,
     title: "Offshore",
@@ -22,12 +22,9 @@ export const contactCards = [
       {
         country: "Nigeria",
         address:
-          "Oniyangi Complex, Offa Garage Asa Dam Bypass, Ilorin, Kwara, Nigeria 240242",
+          "No. 8, Saadu Oganija Street, Gaa-Odota, Ilorin, Kwara State, Nigeria",
       },
-      {
-        country: "Brazil",
-        address: "R Augusto Dos Anjos, Barueri, Sao Paulo, Brazil 06485-370",
-      },
+    
     ],
   },
   {
@@ -36,11 +33,11 @@ export const contactCards = [
     details: [
       {
         label: "Let's talk innovation:",
-        contact: "+1-CALL-NAME (225-525-8386)",
+        contact: "+234 703 367 3269",
       },
       {
         label: "Reach out digitally, let’s innovate together:",
-        contact: "test@test.com",
+        contact: "tech@leansoftworks.com",
         Icon: FaEnvelope,
       },
     ],
