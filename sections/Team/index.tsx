@@ -20,7 +20,7 @@ const Team = () => {
     },
     {
       id: 3,
-      name: "Abdul Rahman Kole-Ibrahim",
+      name: "Abdul Rahman",
       title: "Technical Team Lead",
       image: "/images/dummy.jpg",
     },

@@ -42,7 +42,7 @@ const About: React.FC = () => {
           <div className="flex-1">
             <Image
               src={aboutImg}
-              alt="About Alveum"
+              alt="About LeanSoftWorks"
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>

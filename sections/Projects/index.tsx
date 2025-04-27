@@ -7,78 +7,44 @@ import pr1 from "@/public/images/pr1.jpg";
 import pr2 from "@/public/images/pr2.jpg";
 import pr3 from "@/public/images/pr3.jpg";
 import pr4 from "@/public/images/pr4.jpg";
-import pr5 from "@/public/images/pr5.jpg";
-import pr6 from "@/public/images/pr6.jpg";
-import pr7 from "@/public/images/pr7.jpg";
-import pr8 from "@/public/images/pr8.jpg";
-
+import eCommerceImage from "@/public/images/ecommerce.webp";
+import fintechImage from "@/public/images/fintech.jpg";
 
 const Projects = () => {
   const portfolioItems = [
     {
       id: 1,
-      image: pr1,
-      category: "FinTech",
-      title: "AI-Powered Healthcare",
-      description: "Revolutionizing healthcare diagnostics with AI.",
-      link: "#",
+      image: fintechImage,
+      category: "Fintech Solution",
+      title: "Reyts",
+      description: "Revolutionizing fintech and transforming the global movement of funds",
+      link: "https://reyts.com/",
     },
     {
       id: 2,
-      image: pr2,
-      category: "eCommerce",
-      title: "Financial Forecasting",
-      description: "Optimizing financial predictions with advanced models.",
+      image: eCommerceImage,
+      category: "eCommerce Solution",
+      title: "Muzi",
+      description: "Meal delivery service that delivers fresh, healthy meals to your door.",
       link: "#",
     },
     {
       id: 3,
       image: pr3,
-      category: "Journal Management website",
-      title: "Chatbot Development",
-      description: "Building intelligent chatbots for customer support.",
-      link: "#",
+      category: "Journal Management Solution",
+      title: "Kashere Journal Management System",
+      description: "A comprehensive journal management system for academic publications.",
+      link: "https://www.kasherejose.ng/",
     },
     {
       id: 4,
       image: pr4,
-      category: "Event management applications",
-      title: "Supply Chain Automation",
-      description: "Streamlining supply chain processes with automation.",
+      category: "Event Management Solution",
+      title: "BuzzMap",
+      description: "Event management platform for seamless event planning and execution",
       link: "#",
     },
-    {
-      id: 5,
-      image: pr5,
-      category: "FinTech",
-      title: "AI for Retail",
-      description: "Enhancing retail experiences with AI solutions.",
-      link: "#",
-    },
-    {
-      id: 6,
-      image: pr6,
-      category: "eCommerce",
-      title: "Weather Prediction",
-      description: "Accurate weather forecasting using predictive models.",
-      link: "#",
-    },
-    {
-      id: 7,
-      image: pr7,
-      category: "Journal Management website",
-      title: "Sentiment Analysis",
-      description: "Analyzing customer sentiment with NLP.",
-      link: "#",
-    },
-    {
-      id: 8,
-      image: pr8,
-      category: "Event management applications",
-      title: "HR Process Automation",
-      description: "Automating HR workflows for efficiency.",
-      link: "#",
-    },
+
   ];
 
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
@@ -104,11 +70,8 @@ const Projects = () => {
               Recent <span className="text-electblue">Projects</span>
             </h2>
             <h5 className="text-lg text-center text-textcolor">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit.
+              Explore our recent projects that showcase our expertise in
+              delivering innovative solutions across various domains.
             </h5>
           </div>
 

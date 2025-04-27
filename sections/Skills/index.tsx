@@ -5,11 +5,10 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 
 const Skills = () => {
   const skills = [
-    { title: "Mobile & Web Development", percentage: 90 },
-    { title: "AI & Machine Learning", percentage: 85 },
-    { title: "Data Engineering", percentage: 80 },
+    { title: "Mobile & Web Development", percentage: 95 },
+    { title: "AI & Machine Learning", percentage: 90 },
     { title: "Cloud Infrastructure", percentage: 95 },
-    { title: "Automation & DevOps", percentage: 75 },
+    { title: "Automation & DevOps", percentage: 90 },
   ];
 
   const faqs = [
@@ -38,7 +37,7 @@ const Skills = () => {
             Skills & <span className="text-electblue">FAQ</span>
           </h2>
           <h5 className="text-lg text-center text-textcolor">
-            This section highlights the key skills & competencies that set Alveum apart in the AI/ML software development industry.
+            This section highlights the key skills & competencies that set LeanSoftWorks apart in the AI/ML software development industry.
           </h5>
         </div>
 
