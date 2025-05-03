@@ -78,9 +78,9 @@ const Footer = () => {
                 <div className="w-10 h-[1px] bg-electblue mb-4"></div>
                 <div className="flex flex-col space-y-3">
                   {[
-                    { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, adipisci!", date: "March 14, 2025" },
-                    { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, adipisci!", date: "Feb 22, 2025" },
-                    { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, adipisci!", date: "Jan 30, 2025" },
+                    // { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, adipisci!", date: "March 14, 2025" },
+                    // { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, adipisci!", date: "Feb 22, 2025" },
+                    // { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, adipisci!", date: "Jan 30, 2025" },
                   ].map((news, index) => (
                     <div key={index} className="max-w-[230px]">
                       <p className="text-lg">{news.text}</p>
@@ -127,7 +127,7 @@ const Footer = () => {
         <span className="text-[14px]">
           © 2024{" "}
           <Link href="#" className="text-electblue">
-            Name Inc.
+            LeanSoftWorks Inc.
           </Link>{" "}
           All Rights Reserved.
         </span>

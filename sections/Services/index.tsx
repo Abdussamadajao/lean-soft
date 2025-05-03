@@ -26,9 +26,9 @@ const Services: React.FC = () => {
     },
     {
       icon: <FaCode className="w-12 h-12 text-electblue" />,
-      title: "AI & ML Solutions",
+      title: "AI Powered Software Solutions",
       description:
-        "Intelligent automation that learns, predicts, and adapts.",
+       "Intelligent software that uses AI to solve problems.",
     },
     {
       icon: <FaCloud className="w-12 h-12 text-electblue" />,
@@ -36,12 +36,12 @@ const Services: React.FC = () => {
       description:
         "Robust and secure systems built on modern cloud infrastructure.",
     },
-    {
-      icon: <FaDatabase className="w-12 h-12 text-electblue" />,
-      title: "Database Architecture",
-      description:
-        "Reliable storage, structured for performance and security.",
-    },
+    // {
+    //   icon: <FaDatabase className="w-12 h-12 text-electblue" />,
+    //   title: "Database Architecture",
+    //   description:
+    //     "Reliable storage, structured for performance and security.",
+    // },
     // {
     //   icon: <FaDatabase className="w-12 h-12 text-electblue" />,
     //   title: "Database Management",

@@ -3,13 +3,10 @@
 import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
-import c1 from "@/public/images/clients/c1.jpg";
-import c2 from "@/public/images/clients/c2.jpg";
-import c3 from "@/public/images/clients/c3.gif";
-import c4 from "@/public/images/clients/c4.jpg";
-import c5 from "@/public/images/clients/c5.jpg";
+import kashere from "@/public/images/clients/kashere.png";
 
-const clients = [c1, c2, c3, c4, c5];
+
+const clients = [kashere];
 
 const Clients = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
