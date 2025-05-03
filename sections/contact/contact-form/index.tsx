@@ -6,8 +6,9 @@ import { useForm } from "react-hook-form";
 import { Form, RHFInput, RHFTextarea } from "@/constants";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
+import axios from "axios";
+import { toast } from "sonner";
 
-// Enhanced phone validation with regex for common formats
 const phoneRegex = new RegExp(
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
 );
@@ -22,7 +23,8 @@ const formSchema = z.object({
   phone: z
     .string()
     .min(10, "Phone number must be at least 10 digits")
-    .regex(phoneRegex, "Invalid phone number format"),
+    .regex(phoneRegex, "Invalid phone number format")
+    .optional(),
   message: z
     .string()
     .min(10, "Message must be at least 10 characters")
@@ -47,13 +49,27 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
     try {
-      setIsSubmitting(true);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log("Form submitted:", data);
-      form.reset();
+      const response = await axios.post("/api/send-email", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.status === 200) {
+        toast.success("Message sent successfully!");
+        form.reset();
+      }
     } catch (error) {
-      console.error("Submission error:", error);
+      let errorMessage = "Failed to send message. Please try again later.";
+
+      if (axios.isAxiosError(error)) {
+        errorMessage = error.response?.data?.message || errorMessage;
+      }
+
+      toast.error(errorMessage);
+      console.error("Error sending message:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -61,7 +77,7 @@ const ContactForm = () => {
 
   return (
     <section className="container-custom py-11">
-      <div className=" py-20  pb-[70px] rounded-lg">
+      <div className="py-20 pb-[70px] rounded-lg">
         <h1 className="text-[28px] capitalize text-black mb-5 font-medium leading-6">
           Let's Start the Conversation.
         </h1>
@@ -101,8 +117,7 @@ const ContactForm = () => {
             <Button
               type="submit"
               className="w-full h-[48px] text-xl font-semibold bg-electblue text-white hover:bg-transparent hover:text-electblue cursor-pointer hover:border hover:border-electblue transition-colors duration-300"
-              disabled={isSubmitting}
-            >
+              disabled={isSubmitting || !form.formState.isValid}>
               {isSubmitting ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />

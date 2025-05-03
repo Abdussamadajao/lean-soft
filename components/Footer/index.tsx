@@ -8,129 +8,98 @@ import {
   FaSkype,
 } from "react-icons/fa";
 import { HiOutlineChevronRight } from "react-icons/hi";
-// import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="bg-black py-16">
-        <div className="container-custom mx-auto">
-          <div className="flex flex-col gap-8 lg:flex-row lg:gap-1 text-white">
-            <div className="flex flex-col md:flex-row gap-8 lg:w-1/2 w-full">
-              <div className="flex flex-col gap-4 md:w-1/2 w-full">
-                <div>
-                  <h1 className="text-white text-5xl font-extrabold">LOGO</h1>
-                </div>
-                <div className="max-w-[270px]">
-                  <p className="text-lg">
-                    Channeling Innovation to transform abstract AI concepts into
-                    tangible, groundbreaking solutions that redefine industries
-                    and unlock new realms of possibility.
-                  </p>
-                </div>
+    <footer className="bg-black text-white">
+      <div className="container-custom mx-auto py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="space-y-6">
+            <Image
+              src={"/logo/logo-white.png"}
+              width={100}
+              height={10}
+              alt="logo"
+            />
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Channeling Innovation to transform abstract AI concepts into
+              tangible, groundbreaking solutions that redefine industries and
+              unlock new realms of possibility.
+            </p>
+          </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold mb-4">LET'S TALK</h3>
-                  <div className="flex space-x-3">
-                    {[FaLinkedinIn, FaFacebookF, FaXTwitter, FaInstagram, FaSkype].map((Icon, index) => (
-                      <Link
-                        key={index}
-                        href="/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-9 h-9 flex items-center justify-center bg-electblue rounded-full hover:bg-[#1E91C1] transition"
-                      >
-                        <Icon size={16} color="white" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
+          {/* Quick Links */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-3">
+              {[
+                { name: "Home", link: "/" },
+                { name: "About Us", link: "/about" },
+                { name: "Services", link: "/services" },
+                { name: "Projects", link: "/projects" },
+              ].map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.link}
+                    className="flex items-center group text-lg text-gray-300 hover:text-electblue transition-colors">
+                    <HiOutlineChevronRight className="mr-2 text-electblue transition-transform group-hover:translate-x-1" />
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <div className="md:w-1/2 w-full">
-                <h2 className="text-lg font-semibold mb-2">QUICK LINKS</h2>
-                <div className="w-10 h-[1px] bg-electblue mb-4"></div>
-                <ul className="space-y-2">
-                  {[
-                    { name: "Home", link: "/" },
-                    { name: "About Us", link: "/about" },
-                    { name: "Services", link: "/services" },
-                    { name: "Projects", link: "/projects" },
-                    { name: "Contact", link: "/contact" },
-                  ].map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.link}
-                        className="flex items-center text-lg font-semibold text-white hover:text-electblue transition"
-                      >
-                        <HiOutlineChevronRight className="mr-2 transition" />
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          {/* Social Connections */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
+            <div className="flex space-x-4">
+              {[
+                { icon: FaLinkedinIn, link: "#" },
+                { icon: FaFacebookF, link: "#" },
+                { icon: FaXTwitter, link: "#" },
+                { icon: FaInstagram, link: "#" },
+                { icon: FaSkype, link: "#" },
+              ].map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-electblue/10 hover:bg-electblue/20 rounded-full transition-colors">
+                  <social.icon size={20} className="text-electblue" />
+                </Link>
+              ))}
             </div>
 
-            <div className="flex flex-col md:flex-row gap-6 lg:w-1/2 w-full">
-              <div className="md:w-1/2 w-full">
-                <h2 className="text-lg font-semibold mb-2">LATEST NEWS</h2>
-                <div className="w-10 h-[1px] bg-electblue mb-4"></div>
-                <div className="flex flex-col space-y-3">
-                  {[
-                    // { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, adipisci!", date: "March 14, 2025" },
-                    // { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, adipisci!", date: "Feb 22, 2025" },
-                    // { text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, adipisci!", date: "Jan 30, 2025" },
-                  ].map((news, index) => (
-                    <div key={index} className="max-w-[230px]">
-                      <p className="text-lg">{news.text}</p>
-                      <p className="text-electblue mt-1 text-[13px] font-bold">
-                        {news.date}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="md:w-1/2 w-full">
-                <h2 className="text-lg font-semibold mb-2">NEWS LETTER</h2>
-                <div className="w-10 h-[1px] bg-electblue mb-4"></div>
-                <form className="flex flex-col space-y-2">
-                  <input
-                    type="text"
-                    placeholder="Your Name..."
-                    className="p-2 bg-[#313131] text-white focus:outline-none"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your Email..."
-                    className="p-2 bg-[#313131] text-white focus:outline-none"
-                  />
-                  <textarea
-                    placeholder="Your Comments..."
-                    className="p-2 bg-[#313131] text-white focus:outline-none h-24"
-                  ></textarea>
-                  <button
-                    type="submit"
-                    className="bg-electblue hover:bg-[#1E91C1] transition text-white font-semibold py-2 rounded-md"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-              </div>
+            <div className="pt-6 border-t border-gray-700">
+              <h4 className="text-lg font-semibold mb-3">Let's Collaborate</h4>
+              <p className="text-gray-300">
+                Reach out to discuss how we can transform your ideas into
+                reality.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block mt-4 text-electblue font-semibold hover:underline">
+                Get in Touch →
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-[#121212] text-center p-4 text-white font-semibold">
-        <span className="text-[14px]">
-          © 2024{" "}
-          <Link href="#" className="text-electblue">
-            LeanSoftWorks Inc.
-          </Link>{" "}
-          All Rights Reserved.
-        </span>
+      {/* Copyright */}
+      <div className="bg-[#121212] py-4">
+        <div className="container-custom mx-auto text-center">
+          <span className="text-sm text-gray-400">
+            © 2024{" "}
+            <Link href="#" className="text-electblue hover:underline">
+              LeanSoftWorks Inc.
+            </Link>{" "}
+            All Rights Reserved.
+          </span>
+        </div>
       </div>
     </footer>
   );

@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative w-full h-[calc(100vh-80px)]"
+      className="relative w-full h-screen"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}>
       <div className="overflow-hidden h-full" ref={emblaRef}>
@@ -139,14 +139,7 @@ const Hero: React.FC = () => {
                     ease: "easeInOut",
                     delay: 1.3,
                   }}
-                  className="mt-6 flex gap-6 flex-col md:flex-row ">
-                  <button className="bg-electblue hover:bg-blue-700 transition-all duration-300 px-6 py-2 rounded-sm text-white font-semibold shadow-lg">
-                    EXPLORE OUR SERVICES
-                  </button>
-                  <button className="bg-electblue hover:bg-gray-800 transition-all duration-300 px-6 py-2 rounded-sm text-white font-semibold shadow-lg">
-                    LET'S TALK
-                  </button>
-                </motion.div>
+                  className="mt-6 flex gap-6 flex-col md:flex-row "></motion.div>
               </div>
             </div>
           ))}

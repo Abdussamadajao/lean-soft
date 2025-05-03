@@ -138,6 +138,8 @@ const Projects = () => {
                     <p className="text-sm mb-4">{item.description}</p>
                     <a
                       href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-sm font-semibold underline hover:text-black transition-colors"
                     >
                       Learn More
