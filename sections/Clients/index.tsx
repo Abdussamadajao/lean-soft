@@ -4,9 +4,12 @@ import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import kashere from "@/public/images/clients/kashere.png";
+import reyts from "@/public/images/clients/reyts.png";
+import buzzmap from "@/public/images/clients/buzzmap.webp";
+import yayko from "@/public/images/clients/yayako.jpeg";
 
 
-const clients = [kashere];
+const clients = [kashere, reyts, buzzmap, yayko];
 
 const Clients = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({

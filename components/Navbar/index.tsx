@@ -118,16 +118,15 @@ const Navbar = () => {
         <div className="container-custom flex justify-between items-center !pl-[0px]">
           {/* Logo */}
           <Link href="/" className="cursor-pointer" aria-label="Home">
-            <h1
-              className={`text-4xl font-extrabold ${
-                isHero ? "text-white" : "text-black"
-              }`}>
+            <h1 className={`text-4xl font-extrabold flex items-center space-x-2`}>
               <Image
-                src={isHero ? "/logo/logo-white.png" : "/logo/logo.png"}
-                width={80}
-                height={40}
-                alt="logo"
+              src={isHero ? "/logo/logo-white.png" : "/logo/logo.png"}
+              width={80}
+              height={40}
+              alt="logo"
               />
+                <span className={`${isHero ? "text-white" : "text-electblue"} text-[30px]`}>LeanSoftWorks</span>
+              
             </h1>
           </Link>
 

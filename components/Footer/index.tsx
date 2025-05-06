@@ -16,16 +16,14 @@ const Footer = () => {
       <div className="container-custom mx-auto py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           <div className="space-y-6">
-            <Image
-              src={"/logo/logo-white.png"}
-              width={100}
-              height={10}
-              alt="logo"
-            />
+            <div className="flex items-center space-x-4">
+              <Image src={"/logo/logo-white.png"} width={100} height={10} alt="logo" />
+              <span className="text-white text-[30px]">LeanSoftWorks</span>
+            </div>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Channeling Innovation to transform abstract AI concepts into
-              tangible, groundbreaking solutions that redefine industries and
-              unlock new realms of possibility.
+              LeanSoftWorks is a leading software development company
+              specializing in AI-driven solutions, dedicated to transforming
+              industries through innovative technology and exceptional service.
             </p>
           </div>
 
