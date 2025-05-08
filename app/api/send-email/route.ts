@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     });
 
     const mailOptions = {
-      to: "abdussamadajao@gmail.com",
+      to: "Tech@leansoftworks.com",
       from: body.email,
       subject: `${body.name} Enquiry on LeanSoftWorks Inc- ${body.subject}`,
       html: `<!DOCTYPE html>
