@@ -3,7 +3,7 @@ import React from "react";
 
 const Contacts = () => {
   return (
-    <section className="container-custom py-[80px] pb-[60px]">
+    <section className="container-custom pb-[100px]">
       <div className="flex flex-wrap lg:flex-nowrap justify-center gap-8 ">
         {contactCards.map((card, index) => (
           <div

@@ -5,8 +5,8 @@ const Contact = () => {
   return (
     <>
       <ContactHero />
-      <Contacts />
       <ContactForm />
+      <Contacts />
     </>
   );
 };

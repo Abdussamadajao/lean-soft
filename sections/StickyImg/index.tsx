@@ -24,10 +24,11 @@ const StickyImg = () => {
                 </h1>
 
                 <button
-                    style={{ width: "213px", height: "52px" }}
-                    className="bg-transparent border-white border-2 text-white rounded-sm text-base lg:text-lg font-semibold hover:cursor-pointer transition-all whitespace-nowrap mt-4 md:mt-0 flex items-center justify-center"
+                  style={{ width: "213px", height: "52px" }}
+                  onClick={() => window.location.href = "/contact"}
+                  className="bg-transparent border-white border-2 text-white rounded-sm text-base lg:text-lg font-semibold hover:cursor-pointer transition-all whitespace-nowrap mt-4 md:mt-0 flex items-center justify-center"
                 >
-                    CONTACT US NOW
+                  CONTACT US NOW
                 </button>
                 </div>
             </div>

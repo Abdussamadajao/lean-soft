@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-electblue: #2ab9eb;
+  --color-electblue: #0000D0;
   --color-textcolor: #727b9a;
   --color-headingcolor: #333333;
 }
@@ -121,7 +121,7 @@
 }
 
 @theme {
-  --color-electblue: oklch(57.61% 0.233 258.59);
+  --color-electblue: #0000D0;
 }
 
 @theme inline {
