@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-electblue: #0000D0;
+  --color-electblue: #0000d0;
   --color-textcolor: #727b9a;
   --color-headingcolor: #333333;
 }
@@ -59,7 +59,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: #0000d0;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -121,7 +121,7 @@
 }
 
 @theme {
-  --color-electblue: #0000D0;
+  --color-electblue: #0000d0;
 }
 
 @theme inline {

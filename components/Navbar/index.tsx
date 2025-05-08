@@ -125,11 +125,15 @@ const Navbar = () => {
                 width={80}
                 height={40}
                 alt="logo"
+                style={{
+                  width: "auto", // Preserve aspect ratio when scaling
+                  height: "auto", // Preserve aspect ratio when scaling
+                }}
               />
               <span
                 className={`${
                   isHero ? "text-white" : "text-electblue"
-                } text-[30px]`}>
+                } text-[30px] hidden md:block`}>
                 LeanSoftWorks
               </span>
             </h1>

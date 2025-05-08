@@ -13,6 +13,8 @@ import hero3 from "@/public/hero/hr3.png";
 import hero4 from "@/public/hero/hr4.png";
 import hero5 from "@/public/hero/hr5.png";
 import hero6 from "@/public/hero/hr6.png";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const slides = [hero1, hero2, hero3, hero4, hero5, hero6];
 
@@ -51,7 +53,7 @@ const slideTexts = [
 
 const Hero: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: "y" }, [
-    Autoplay({ delay: 5000 }),
+    // Autoplay({ delay: 5000 }),
   ]);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
@@ -139,7 +141,22 @@ const Hero: React.FC = () => {
                     ease: "easeInOut",
                     delay: 1.3,
                   }}
-                  className="mt-6 flex gap-6 flex-col md:flex-row "></motion.div>
+                  className="mt-6 flex gap-6 flex-col md:flex-row">
+                  <Link href="/#services" passHref>
+                    <Button
+                      asChild
+                      className="bg-electblue z-[100] hover:bg-transparent hover:text-electblue border border-transparent hover:border-electblue transition-all duration-300 px-6 py-2 rounded-sm text-white font-semibold shadow-lg">
+                      EXPLORE OUR SERVICES
+                    </Button>
+                  </Link>
+                  <Link href="/contact" passHref>
+                    <Button
+                      asChild
+                      className="bg-electblue z-[100] hover:bg-transparent hover:text-electblue border border-transparent hover:border-electblue transition-all duration-300 px-6 py-2 rounded-sm text-white font-semibold shadow-lg">
+                      LET'S TALK
+                    </Button>
+                  </Link>
+                </motion.div>
               </div>
             </div>
           ))}
@@ -150,15 +167,15 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="absolute inset-0">
+        className="absolute inset-0 pointer-events-none">
         <button
           onClick={scrollPrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-1 bg-electblue bg-opacity-50 text-white rounded-none hover:bg-opacity-75 transition hover:cursor-pointer">
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-1 bg-electblue bg-opacity-50 text-white rounded-none hover:bg-opacity-75 transition hover:cursor-pointer pointer-events-auto">
           <ChevronLeft size={30} />
         </button>
         <button
           onClick={scrollNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1 bg-electblue bg-opacity-50 text-white rounded-none hover:bg-opacity-75 transition hover:cursor-pointer">
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1 bg-electblue bg-opacity-50 text-white rounded-none hover:bg-opacity-75 transition hover:cursor-pointer pointer-events-auto">
           <ChevronRight size={30} />
         </button>
       </motion.div>
