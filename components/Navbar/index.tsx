@@ -18,7 +18,7 @@ const NAV_LINKS: NavLink[] = [
   { name: "About", target: "about" },
   { name: "Service", target: "services" },
   { name: "Projects", target: "projects" },
-  { name: "News", target: "news" },
+  // { name: "News", target: "news" },
   { name: "Team", target: "team" },
   { name: "Contact", target: "contact", isLink: true },
 ];
@@ -118,15 +118,20 @@ const Navbar = () => {
         <div className="container-custom flex justify-between items-center !pl-[0px]">
           {/* Logo */}
           <Link href="/" className="cursor-pointer" aria-label="Home">
-            <h1 className={`text-4xl font-extrabold flex items-center space-x-2`}>
+            <h1
+              className={`text-4xl font-extrabold flex items-center space-x-2`}>
               <Image
-              src={isHero ? "/logo/logo-white.png" : "/logo/logo.png"}
-              width={80}
-              height={40}
-              alt="logo"
+                src={isHero ? "/logo/logo-white.png" : "/logo/logo.png"}
+                width={80}
+                height={40}
+                alt="logo"
               />
-                <span className={`${isHero ? "text-white" : "text-electblue"} text-[30px]`}>LeanSoftWorks</span>
-              
+              <span
+                className={`${
+                  isHero ? "text-white" : "text-electblue"
+                } text-[30px]`}>
+                LeanSoftWorks
+              </span>
             </h1>
           </Link>
 
