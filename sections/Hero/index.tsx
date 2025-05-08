@@ -7,16 +7,17 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import hero1 from "@/public/hero/hr1.png";
-import hero2 from "@/public/hero/hr2.png";
-import hero3 from "@/public/hero/hr3.png";
-import hero4 from "@/public/hero/hr4.png";
-import hero5 from "@/public/hero/hr5.png";
-import hero6 from "@/public/hero/hr6.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const slides = [hero1, hero2, hero3, hero4, hero5, hero6];
+const slides = [
+  "/hero/hr1.png",
+  "/hero/hr2.png",
+  "/hero/hr3.png",
+  "/hero/hr4.png",
+  "/hero/hr5.png",
+  "/hero/hr6.png",
+];
 
 const slideTexts = [
   {
