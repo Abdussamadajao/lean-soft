@@ -100,7 +100,8 @@ const Navbar = () => {
         onClick={() => isMobile && setIsOpen(false)}
         className={`${baseClasses} ${
           isMobile ? mobileClasses : desktopClasses
-        }`}>
+        }`}
+      >
         {item.name}
       </Link>
     );
@@ -110,30 +111,30 @@ const Navbar = () => {
     <header
       className={`fixed z-30 top-0 left-0 w-full ${
         isHero ? "border-b-0" : "border-b"
-      }`}>
+      }`}
+    >
       <div
         className={`${
           isHero ? "bg-transparent" : "bg-white"
-        } z-40 transition-all duration-300 py-4 lg:py-0 shadow`}>
+        } z-40 transition-all duration-300 py-4 lg:py-0 shadow`}
+      >
         <div className="container-custom flex justify-between items-center !pl-[0px]">
           {/* Logo */}
           <Link href="/" className="cursor-pointer" aria-label="Home">
             <h1
-              className={`text-4xl font-extrabold flex items-center space-x-2`}>
+              className={`text-4xl font-extrabold flex items-center space-x-2`}
+            >
               <Image
                 src={isHero ? "/logo/logo-white.png" : "/logo/logo.png"}
-                width={80}
-                height={40}
+                width={70}
+                height={30}
                 alt="logo"
-                style={{
-                  width: "auto", // Preserve aspect ratio when scaling
-                  height: "auto", // Preserve aspect ratio when scaling
-                }}
               />
               <span
                 className={`${
                   isHero ? "text-white" : "text-electblue"
-                } text-[30px] hidden md:block`}>
+                } text-[30px] hidden md:block`}
+              >
                 LeanSoftWorks
               </span>
             </h1>
@@ -144,7 +145,8 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? "Close menu" : "Open menu"}
-              className={isHero ? "text-white" : "text-electblue"}>
+              className={isHero ? "text-white" : "text-electblue"}
+            >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>
@@ -164,7 +166,8 @@ const Navbar = () => {
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden bg-black shadow-md absolute w-full left-0 z-50">
+            className="lg:hidden bg-black shadow-md absolute w-full left-0 z-50"
+          >
             <nav className="flex flex-col w-full">
               {NAV_LINKS.map((item) => renderNavLink(item, true))}
             </nav>

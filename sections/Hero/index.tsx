@@ -54,7 +54,7 @@ const slideTexts = [
 
 const Hero: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, axis: "y" }, [
-    // Autoplay({ delay: 5000 }),
+    Autoplay({ delay: 5000 }),
   ]);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
@@ -85,9 +85,10 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen"
+      className="relative w-full h-screen pointer-events-none md:pointer-events-auto"
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}>
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex flex-col h-full transform translate-y-0">
           {slides.map((slide, index) => (
@@ -110,7 +111,8 @@ const Hero: React.FC = () => {
                     ease: "easeInOut",
                     delay: 0.7,
                   }}
-                  className="text-xl sm:text-3xl font-semibold tracking-wide">
+                  className="text-xl sm:text-3xl font-semibold tracking-wide"
+                >
                   {slideTexts[index]?.title}
                 </motion.h2>
 
@@ -122,7 +124,8 @@ const Hero: React.FC = () => {
                     ease: "easeInOut",
                     delay: 0.3,
                   }}
-                  className="text-4xl sm:text-6xl font-extrabold mt-4 drop-shadow-lg">
+                  className="text-4xl sm:text-6xl font-extrabold mt-4 drop-shadow-lg"
+                >
                   {slideTexts[index]?.subtitle}
                 </motion.h1>
 
@@ -130,7 +133,8 @@ const Hero: React.FC = () => {
                   initial={{ opacity: 0 }}
                   animate={selectedIndex === index ? { opacity: 1 } : {}}
                   transition={{ duration: 1, delay: 0.4, ease: "easeInOut" }}
-                  className="mt-4 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+                  className="mt-4 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed"
+                >
                   {slideTexts[index]?.desc}
                 </motion.p>
 
@@ -142,18 +146,21 @@ const Hero: React.FC = () => {
                     ease: "easeInOut",
                     delay: 1.3,
                   }}
-                  className="mt-6 flex gap-6 flex-col md:flex-row">
+                  className="mt-6 flex gap-6 flex-col md:flex-row"
+                >
                   <Link href="/#services" passHref>
                     <Button
                       asChild
-                      className="bg-electblue z-[100] hover:bg-transparent hover:text-electblue border border-transparent hover:border-electblue transition-all duration-300 px-6 py-2 rounded-sm text-white font-semibold shadow-lg">
+                      className="bg-electblue z-[100] hover:bg-transparent hover:text-electblue border border-transparent hover:border-electblue transition-all duration-300 px-6 py-2 rounded-sm text-white font-semibold shadow-lg"
+                    >
                       EXPLORE OUR SERVICES
                     </Button>
                   </Link>
                   <Link href="/contact" passHref>
                     <Button
                       asChild
-                      className="bg-electblue z-[100] hover:bg-transparent hover:text-electblue border border-transparent hover:border-electblue transition-all duration-300 px-6 py-2 rounded-sm text-white font-semibold shadow-lg">
+                      className="bg-electblue z-[100] hover:bg-transparent hover:text-electblue border border-transparent hover:border-electblue transition-all duration-300 px-6 py-2 rounded-sm text-white font-semibold shadow-lg"
+                    >
                       LET'S TALK
                     </Button>
                   </Link>
@@ -168,15 +175,18 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="absolute inset-0 pointer-events-none">
+        className="absolute inset-0 pointer-events-none"
+      >
         <button
           onClick={scrollPrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-1 bg-electblue bg-opacity-50 text-white rounded-none hover:bg-opacity-75 transition hover:cursor-pointer pointer-events-auto">
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-1 bg-electblue bg-opacity-50 text-white rounded-none hover:bg-opacity-75 transition hover:cursor-pointer pointer-events-auto"
+        >
           <ChevronLeft size={30} />
         </button>
         <button
           onClick={scrollNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1 bg-electblue bg-opacity-50 text-white rounded-none hover:bg-opacity-75 transition hover:cursor-pointer pointer-events-auto">
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1 bg-electblue bg-opacity-50 text-white rounded-none hover:bg-opacity-75 transition hover:cursor-pointer pointer-events-auto"
+        >
           <ChevronRight size={30} />
         </button>
       </motion.div>
